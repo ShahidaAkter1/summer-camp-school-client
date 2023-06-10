@@ -6,14 +6,19 @@ import SingleInstructor from "./SIngleInstructor";
 
 const Instructor = () => {
   const [instructor] = useInstructor();
-  console.log(instructor);
+  // console.log(instructor);
+  const allInstructor=instructor.filter(sd=>sd.role==='instructor');
+  // console.log(allInstructor);
+
+
+
 
   return (
     <div className="">
       <SectionTitle heading={"All Instructor"}></SectionTitle>
 
-      <div className="grid   grid-cols-2  gap-8  mt-16">
-        {instructor.map((singleInstructorDetails) => (
+      <div className="grid   grid-cols-2 justify-items-center gap-8  mt-16">
+        {allInstructor.map((singleInstructorDetails) => (
           <SingleInstructor
             key={singleInstructorDetails._id}
             singleInstructorDetails={singleInstructorDetails}

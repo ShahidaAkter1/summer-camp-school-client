@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer mt-16 p-10 bg-base-200 text-base-content">
         <div>
          <img src={logo} alt="" />
           <p className='text-2xl font-bold text-orange-600'>cosMake</p>

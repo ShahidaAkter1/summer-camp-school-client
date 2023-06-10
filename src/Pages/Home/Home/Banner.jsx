@@ -12,7 +12,7 @@ import sliderImage7 from '/src/assets/slider/slider-8.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mb-20'>
             <AwesomeSlider>
                 <div> <img className='w-full h-full' src={sliderImage1} alt="" /></div>
                 <div> <img className='w-[100%] h-full' src={sliderImage6} alt="" /></div>

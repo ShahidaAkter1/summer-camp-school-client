@@ -10,11 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
-     //password hide and show
-     const [show, setShow] =useState(false);
-     const handleShow= () =>{
-         setShow(!show)
-     }
 
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -24,7 +19,7 @@ const Login = () => {
 
     
     const { register,reset, handleSubmit, formState: { errors } } = useForm();
-    // const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
 
     const onSubmit = data => {
         // console.log(data);
@@ -97,7 +92,7 @@ const Login = () => {
                                             <span className="label-text text-black">Password</span>
                                         </label>
                                         <div className='w-full rounded-md border-sky-300 flex  justify-between border'>
-                                            <input type={show? "text" :"password"} required
+                                            <input type='password' required
                                                 {...register("password", {
                                                     required: true,
                                                     maxLength: 20,
@@ -106,7 +101,7 @@ const Login = () => {
 
                                                 })}
                                                 placeholder="password" className="input    bg-white border  text-black" />
-                                            <button  ><FaEye className=' mr-4'onClick={handleShow}>{show? "Hide": "Show"}</FaEye></button>
+                                            <button  ><FaEye className=' mr-4'></FaEye></button>
 
 
                                         </div>

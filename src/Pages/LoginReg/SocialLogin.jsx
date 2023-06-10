@@ -16,19 +16,36 @@ const SocialLogin = () => {
 
     const { googleSignIn } = useContext(AuthContext);
     const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then(res => {
-                const user = res.user;
-             navigate(from,{replace:true});
-                // console.log(user);
-                //  navigate(from,{replace:true});
-                toast('Successfully Login With Google!!!')
+        // googleSignIn()
+        //     .then(res => {
+        //         const user = res.user;
+        //      navigate(from,{replace:true});
+        //         // console.log(user);
+        //         //  navigate(from,{replace:true});
+        //         toast('Successfully Login With Google!!!')
 
+        //     })
+        //     .catch(error => {
+        //         // console.log(error);
+        //         toast('  Login failed With Google!!!')
+        //     })
+
+        googleSignIn()
+        .then(res=>{
+            const loggedUser=res.user;
+            const saveUser={name:loggedUser.displayName,email:loggedUser.email,photo:loggedUser.photoURL,role:'student'};
+            fetch('http://localhost:5000/users',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
             })
-            .catch(error => {
-                // console.log(error);
-                toast('  Login failed With Google!!!')
+            .then(res=>res.json())
+            .then(data=>{  
+                      navigate(from,{replace:true})
             })
+        })
     }
 
 

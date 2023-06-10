@@ -1,0 +1,51 @@
+[
+    {
+      "_id": "1",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Introduction to Makeup Artistry",
+      "instructor_name": "Sarah Johnson",
+      "available_seat": 10,
+      "price": 200
+    },
+    {
+      "_id": "2",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Advanced Hairstyling Techniques",
+      "instructor_name": "Michael Smith",
+      "available_seat": 5,
+      "price": 300
+    },
+    {
+      "_id": "3",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Skin Care Masterclass",
+      "instructor_name": "Emily Davis",
+      "available_seat": 8,
+      "price": 250
+    },
+    {
+      "_id": "4",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Fashion Makeup Trends",
+      "instructor_name": "Jennifer Thompson",
+      "available_seat": 12,
+      "price": 150
+    },
+    {
+      "_id": "5",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Nail Art Workshop",
+      "instructor_name": "David Rodriguez",
+      "available_seat": 6,
+      "price": 180
+    },
+    {
+      "_id": "6",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fmakeup-class&psig=AOvVaw2fi8R2nFtASEtWI4jmQ9hM&ust=1686289563314000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDP16X8sv8CFQAAAAAdAAAAABAE",
+      "name": "Bridal Makeup Intensive",
+      "instructor_name": "Rachel Adams",
+      "available_seat": 4,
+      "price": 350
+    }
+  ]
+  

@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
  
 import Banner from './Banner';
-import SectionTitle from '../../../components/SectionTitle';
-import StudentsLove from './StudentsLove';
-import Category from './Category';
+import Popular from '../Popular/Popular';
+import PopularInstructor from '../Popular/PopularInstructor';
+ 
 
 const Home = () => {
     return (
@@ -15,10 +15,11 @@ const Home = () => {
 
         
             <Banner></Banner>
-            <SectionTitle heading={'Popular'}></SectionTitle>
+            <Popular></Popular>
+            <PopularInstructor></PopularInstructor>
+          
 
-            <StudentsLove></StudentsLove>
-            <Category></Category>
+            
            
         </div>
     );
