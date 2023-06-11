@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import logo from '../../public/logo.jpg'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
 
@@ -40,7 +40,11 @@ const Header = () => {
  
  
      },[theme]);
- 
+//  dark light theme end
+
+const activeLink = ' text-white me-4 text-decoration-none border border-warning rounded p-1 px-3   ';
+const normalLink = 'text-white me-4 text-decoration-none';
+
  
 
 
@@ -64,16 +68,16 @@ const Header = () => {
 
 
     const navOptions = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/instructor'>Instructor</Link></li>
-        <li><Link to='/classes'>Classes </Link></li>
-        <li><Link to='/dashboard'>Dashboard </Link></li>
-        <li><Link to=''>
+        <li><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/'>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/instructor'>Instructor</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/classes'>Classes </NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to='/dashboard'>Dashboard </NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? activeLink : normalLink} to=''>
             <button className=" flex ">
                 <FaShoppingCart className='mt-1  text-sm'></FaShoppingCart>
                 <sup className='mt-2 ml-1 '>0</sup>
             </button>
-        </Link></li>
+        </NavLink></li>
 
         {/* dark light theme */}
         <li>
@@ -106,7 +110,7 @@ const Header = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  bg-black">
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52  bg-black">
 
                             {navOptions}
 

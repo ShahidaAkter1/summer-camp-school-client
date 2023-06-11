@@ -1,4 +1,4 @@
-### CosMake
+### CosmetiCraft
 
 Discover the world of beauty and glamour through our cosmetic makeup school website! With a focus on hands-on training and cutting-edge techniques, we offer a range of programs designed to empower aspiring makeup artists. Immerse yourself in a supportive learning environment where you'll gain invaluable knowledge, refine your craft, and build a strong professional network. Join us on this transformative path towards becoming a skilled makeup artist who can turn every face into a masterpiece.
 
