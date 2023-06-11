@@ -23,7 +23,7 @@ const StudentsLove = () => {
 
 
         <div>
-            <h1 className='text-center font-bold text-4xl mt-20'>Why Our Students Love CosMake Academy</h1>
+            <h1 className='text-center font-bold text-4xl mt-20'>Why Our Students Love CosmetiCraft Academy</h1>
 
 
            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 p-2 mb-10'>

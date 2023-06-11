@@ -52,7 +52,7 @@ const MyClass = () => {
     return (
         <div>
             <Helmet>
-                <title>Add a Class | SSC</title>
+                <title>Add a Class | CosmetiCraft</title>
             </Helmet>
 
             <SectionTitle heading={'My Class'}></SectionTitle>

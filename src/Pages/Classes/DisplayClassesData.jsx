@@ -10,14 +10,19 @@ const DisplayClassesData = ({ singleClass, index, handleAddToClass }) => {
   const { className, email, instructorName, price, totalSeat, image, status, _id, feedback, available_seat } = singleClass;
   // console.log(singleClass)
 
-  //TODO: avialble seat===0 hole card red
-  //do using dynamic className styling
-  //just bg-red-600
 
-  const [findUserRole] = useRole();
-  // console.log(findUserRole);
+  const { user } = useContext(AuthContext);
 
 
+  let role = 'student';
+  if (user) {
+    const [findUserRole] = useRole();
+    role = findUserRole;
+
+  }
+
+
+  // console.log(role);
   // const availableSeat = 0;
 
 
@@ -30,8 +35,8 @@ const DisplayClassesData = ({ singleClass, index, handleAddToClass }) => {
     <div>
 
       {/* <div className="card w-96  shadow-xl"> */}
-      <div className={available_seat===0 ? 'bg-red-600 card w-96  text-white shadow-xl ' : ' card w-96  shadow-xl'}>
-      
+      <div className={available_seat === 0 ? 'bg-red-600 card w-96  text-white shadow-xl ' : ' card w-96  shadow-xl'}>
+
         <figure>
           <img className='w-[450px] h-[200px]' src={image} alt="Shoes" />
         </figure>
@@ -49,8 +54,8 @@ const DisplayClassesData = ({ singleClass, index, handleAddToClass }) => {
 
 
             {
-              findUserRole !== 'student'  || available_seat===0 ?
-                <button disabled  onClick={() => handleAddToClass(singleClass)} className="btn btn-primary text-white border ">Select Class</button>
+              role !== 'student' || available_seat === 0 ?
+                <button disabled onClick={() => handleAddToClass(singleClass)} className="btn btn-primary text-white border ">Select Class</button>
 
                 :
 

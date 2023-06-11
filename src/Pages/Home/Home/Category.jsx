@@ -27,9 +27,9 @@ const Category = () => {
             
           {/* Content */}
           <div className="w-1/2 px-6" data-aos="zoom-in-left">
-             <h2 className="text-2xl font-bold">Online Makeup Courses At CosMake Makeup Academy</h2>
+             <h2 className="text-2xl font-bold">Online Makeup Courses At CosmetiCraft Makeup Academy</h2>
              <h2 className="text-lg font-medium mt-4">Become A Certified Professional Makeup Artist.</h2>
-             <p className="mt-2">At <strong>CosMake</strong> MAKEUP ACADEMY, we bring out the best in every student. We are an accredited makeup academy, teaching makeup artistry to people around the world. We are renowned for our excellence in educating professionals who are interested in this exciting career.</p>
+             <p className="mt-2">At <strong>CosmetiCraft</strong> MAKEUP ACADEMY, we bring out the best in every student. We are an accredited makeup academy, teaching makeup artistry to people around the world. We are renowned for our excellence in educating professionals who are interested in this exciting career.</p>
 
 
              <p className="mt-2"> <strong>Online Makeup Courses</strong> are delivered entirely online using our advanced training platform. Once enrolled, you’ll gain access to all the curriculum chapters, videos, tests, and makeup assignments associated with your course.</p>

@@ -1,16 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import SectionTitle from '../../../components/SectionTitle';
+import usePayment from '../../../CustomHook/usePayment';
+import DisplayPaymentHistory from './DisplayPaymentHistory';
 
 const Payment = () => {
 
-    const paymentHistory = false;
+    // const paymentHistory = false;
+
+    const [paymentHistory, paymentHistoryLoading, refetch] = usePayment();
+
+    // console.log(paymentHistory);
+    paymentHistory.sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
     return (
         <>
 
             <Helmet>
-                <title>Enroll Class | SSC</title>
+                <title>Enroll Class | CosmetiCraft</title>
             </Helmet>
             <SectionTitle heading={' Make Payment'}></SectionTitle>
 
@@ -22,28 +30,35 @@ const Payment = () => {
                         <table className="table border border-sky-100">
                             {/* head */}
                             <thead className='text-black text-lg'>
-                                <tr>
+                                <tr className='text-center'>
                                     <th># </th>
-                                    <th>Image</th>
-                                    <th>Course Name</th>
-                                    <th>Ins. Name</th>
-                                    <td>Price</td>
+                                    <th>Transaction ID</th>
+                                    <th>Date </th>
+                           
+                            
+                                 <th>Enroll Class</th>
+                                    <th>Amount</th>
                                     <th >Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* {
-                            selectClasses.map((selectedClass, index, refetch) => <DisplaySelectedClass
-                                key={selectedClass._id}
-                                selectedClass={selectedClass}
-                                index={index}
-                                refetch={refetch}
-                            ></DisplaySelectedClass>)
-                        } */}
+
+
+                                {
+                                    paymentHistory.map((singlePayment, index) => <DisplayPaymentHistory
+                                        key={singlePayment._id}
+                                        singlePayment={singlePayment}
+                                        index={index}
+                                    ></DisplayPaymentHistory>)
+                                }
+
 
                             </tbody>
                         </table>
                     </div>
+
+
+
 
 
                     :

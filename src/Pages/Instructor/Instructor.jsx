@@ -3,13 +3,13 @@ import SectionTitle from "../../components/SectionTitle";
 import useInstructor from "../../CustomHook/useInstructor";
 
 import SingleInstructor from "./SIngleInstructor";
+import UseAllUser from "../../CustomHook/UseAllUser";
 
 const Instructor = () => {
   const [instructor] = useInstructor();
   // console.log(instructor);
   const allInstructor=instructor.filter(sd=>sd.role==='instructor');
   // console.log(allInstructor);
-
 
 
 

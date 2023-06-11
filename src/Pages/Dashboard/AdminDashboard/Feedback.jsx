@@ -54,7 +54,7 @@ const Feedback = () => {
         <div className='mt-12'>
 
             <Helmet>
-                <title>Feedback | SSC</title>
+                <title>Feedback | CosmetiCraft</title>
             </Helmet>
 
             <SectionTitle heading={'GIve Feedback'} ></SectionTitle>

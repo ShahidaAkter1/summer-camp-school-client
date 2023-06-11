@@ -12,7 +12,7 @@ const ManageUsers = () => {
     return (
         <div>
             <Helmet>
-                <title>All Classes | SSC</title>
+                <title>All Classes | CosmetiCraft</title>
             </Helmet>
             <SectionTitle heading={'manage users'}></SectionTitle>
 

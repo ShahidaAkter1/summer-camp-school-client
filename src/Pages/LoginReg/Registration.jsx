@@ -73,7 +73,7 @@ const handleShow= () =>{
     return (
         <div>
             <Helmet>
-                <title>Registration | SSC</title>
+                <title>Registration | CosmetiCraft</title>
             </Helmet>
 
 

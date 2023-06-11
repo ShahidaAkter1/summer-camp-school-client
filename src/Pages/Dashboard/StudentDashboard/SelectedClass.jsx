@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import SectionTitle from '../../../components/SectionTitle';
 import DisplaySelectedClass from './DisplaySelectedClass';
 import useSelectClass from '../../../CustomHook/useSelectClass';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,13 +16,14 @@ const SelectedClass = () => {
     const total = selectClasses.reduce((sum, item) => item.price + sum, 0);
     //  console.log(total);
 
+ 
 
 
     return (
         <div>
 
             <Helmet>
-                <title>Selected Class | SSC</title>
+                <title>Selected Class | CosmetiCraft</title>
             </Helmet>
             <SectionTitle heading={'My Selected class'}></SectionTitle>
 
@@ -32,7 +33,8 @@ const SelectedClass = () => {
                   
                   <div className="overflow-x-auto">
                         <div className='  text-right mb-4'>
-                            <button className="btn btn-secondary w-36 text-xl">Pay</button>
+                        
+                        <Link to={`/dashboard/paymentPage/${total}`}>    <button  className="btn btn-secondary w-36 text-xl">Pay</button></Link>
                         </div>
                         <table className="table border border-sky-100">
                             {/* head */}

@@ -60,7 +60,7 @@ const Login = () => {
     return (
         <div className=''>
             <Helmet>
-                <title>Login | SSC</title>
+                <title>Login | CosmetiCraft</title>
             </Helmet>
 
             <form onSubmit={handleSubmit(onSubmit)} >
@@ -89,9 +89,7 @@ const Login = () => {
 
 
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-black">Password</span>
-                                    </label>
+                                   
 
                                     <div className="form-control">
                                         <label className="label">

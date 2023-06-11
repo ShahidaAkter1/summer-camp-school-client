@@ -86,7 +86,7 @@ const AddClass = () => {
     return (
         <div >
             <Helmet>
-                <title>Add a Class | SSC</title>
+                <title>Add a Class | CosmetiCraft</title>
             </Helmet>
 
             <SectionTitle heading={'Add A Class'}></SectionTitle>

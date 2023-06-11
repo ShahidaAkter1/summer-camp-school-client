@@ -19,6 +19,7 @@ import EnrollClass from "../Pages/Dashboard/StudentDashboard/EnrollClass";
 import SelectedClass from "../Pages/Dashboard/StudentDashboard/SelectedClass";
 import Feedback from "../Pages/Dashboard/AdminDashboard/Feedback";
 import Payment from "../Pages/Dashboard/StudentDashboard/Payment";
+import PaymentPage from "../Pages/Dashboard/StudentDashboard/PaymentPage";
 
 
 
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment',
                 element:  <Payment></Payment>
+            },
+            {
+                path: '/dashboard/paymentPage/:total',
+                element:  <PaymentPage></PaymentPage>
             }
         ]
 

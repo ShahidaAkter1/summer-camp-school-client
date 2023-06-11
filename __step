@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
    <Helmet>
-    <title>Registration | SSC</title>
+    <title>Registration | CosmetiCraft</title>
 </Helmet>
 
 
