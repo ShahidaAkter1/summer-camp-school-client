@@ -6,7 +6,7 @@ import Registration from "../Pages/LoginReg/Registration";
 import Instructor from "../Pages/Instructor/Instructor";
 import Classes from "../Pages/Classes/Classes";
 import PrivateRoute from "./PrivateRoute";
-import StudentDashboard from "../Pages/Dashboard/StudentDashboard/StudentDashboard";
+ 
 
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import DashboardLayout from "../Layout/DashboardLayout";
@@ -18,6 +18,7 @@ import MyClass from "../Pages/Dashboard/InstructorDashboard/MyClass";
 import EnrollClass from "../Pages/Dashboard/StudentDashboard/EnrollClass";
 import SelectedClass from "../Pages/Dashboard/StudentDashboard/SelectedClass";
 import Feedback from "../Pages/Dashboard/AdminDashboard/Feedback";
+import Payment from "../Pages/Dashboard/StudentDashboard/Payment";
 
 
 
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute> <DashboardLayout></DashboardLayout> </PrivateRoute>,
         children: [
             {
-                path: '/dashboard',
+                path: '/dashboard/',
                 element: <WelcomeDashboard></WelcomeDashboard>
             },
             {
@@ -86,11 +87,15 @@ const router = createBrowserRouter([
                 path: '/dashboard/selectedClass',
                 element: <SelectedClass></SelectedClass>
             },
+            
             {
                 path: '/dashboard/enrollClass',
                 element: <EnrollClass></EnrollClass>
+            },
+            {
+                path: '/dashboard/payment',
+                element:  <Payment></Payment>
             }
-
         ]
 
     }

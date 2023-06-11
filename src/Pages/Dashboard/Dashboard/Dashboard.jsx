@@ -2,44 +2,52 @@ import React from 'react';
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import useRole from '../../../CustomHook/useRole';
- 
+
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import UseAllUser from '../../../CustomHook/UseAllUser';
- 
+
 
 const Dashboard = () => {
-
- 
-
-
     // const [isAdmin,setIsAdmin]=useState(true);
     // const [isInstructor,setInstructor]=useState(false);
     // const [isStudent,setIsStudent]=useState(false);
 
 
-    const {user}=useContext(AuthContext);
-    const [allUsers]=UseAllUser();
+    const { user } = useContext(AuthContext);
+    const [allUsers, allUsersLoading, refetch] = UseAllUser();
 
-    // console.log(user);
-    console.log(allUsers);
-    const loggedUserEmail=user.email;
-    // console.log(loggedUserEmail);
-    const findUser=allUsers.filter(data=>data.email===loggedUserEmail);
-    console.log(findUser);
+ 
+
+
+    let findUserRole='';
+
+    if (!allUsersLoading) {
+        const loggedUserEmail = user.email;
+        const findUser = allUsers.filter(data => data.email === loggedUserEmail);
+          findUserRole = findUser[0].role;
+        // setFindUserRole(findUserRoles);
+        // console.log(findUserRole);
+    }
+
+
+    // const findUserRole=role;
+    // console.log(findUserRole);
+
+
 
     // const findUserRole=findUser[0].role;
     // console.log( findUserRole);
- 
-    const findUserRole='instructor';
+
+    // const findUserRole='instructor';
     // const findUserRole='admin';
     // const findUserRole='student';
- 
- 
 
- 
- 
- 
+
+
+
+
+
 
 
     return (
@@ -65,28 +73,28 @@ const Dashboard = () => {
 
 
                                 {
-                                    findUserRole==='admin' &&
+                                    findUserRole === 'admin' &&
                                     <>
                                         <Link to='/dashboard/manageClass'>  <li className='ml-4 text-xl'>Manage Class </li> </Link>
-                                        <Link to='/dashboard/manageUsers'>  <li className='ml-4 text-xl'>Manage Users </li>  </Link>                                   
+                                        <Link to='/dashboard/manageUsers'>  <li className='ml-4 text-xl'>Manage Users </li>  </Link>
                                         <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
                                     </>
                                 }
                                 {
-                                      findUserRole==='instructor' &&
+                                    findUserRole === 'instructor' &&
                                     <>
                                         <Link to='/dashboard/addClass'>  <li className='ml-4 text-xl'>Add a Class </li> </Link>
-                                        <Link to='/dashboard/myClass'>  <li className='ml-4 text-xl'>My Class</li>  </Link>                                   
+                                        <Link to='/dashboard/myClass'>  <li className='ml-4 text-xl'>My Class</li>  </Link>
                                         <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
                                     </>
                                 }
 
                                 {
-                                      findUserRole==='student' &&
+                                    findUserRole === 'student' &&
                                     <>
                                         <Link to='/dashboard/selectedClass'>  <li className='ml-4 text-xl'>My Selected Class </li> </Link>
-                                        <Link to='/dashboard/enrollClass'>  <li className='ml-4 text-xl'>My Enroll Class</li>  </Link>                                   
-                                        <Link to='/dashboard/payment'>  <li className='ml-4 text-xl'>Payment</li>  </Link>                                   
+                                        <Link to='/dashboard/enrollClass'>  <li className='ml-4 text-xl'>My Enroll Class</li>  </Link>
+                                        <Link to='/dashboard/payment'>  <li className='ml-4 text-xl'>Payment</li>  </Link>
                                         <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
                                     </>
                                 }
@@ -100,9 +108,9 @@ const Dashboard = () => {
 
 
                     {/* Page content here */}
-                 
- 
-            
+
+
+
 
 
 
@@ -112,35 +120,35 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
                     <ul className="menu p-4 mt-16 w-80 h-full bg-blue-600">
 
-                    {
-                        findUserRole==='admin' &&
-                        <>
-                            <Link to='/dashboard/manageClass'>  <li className='ml-4 text-xl'>Manage Class </li> </Link>
-                            <Link to='/dashboard/manageUsers'>  <li className='ml-4 text-xl'>Manage Users </li>  </Link>                                   
-                            <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
-                        </>
-                    }
+                        {
+                            findUserRole === 'admin' &&
+                            <>
+                                <Link to='/dashboard/manageClass'>  <li className='ml-4 text-xl'>Manage Class </li> </Link>
+                                <Link to='/dashboard/manageUsers'>  <li className='ml-4 text-xl'>Manage Users </li>  </Link>
+                                <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
+                            </>
+                        }
 
 
 
-                    {
-                          findUserRole==='instructor' &&
-                        <>
-                            <Link to='/dashboard/addClass'>  <li className='ml-4 text-xl'>Add a Class </li> </Link>
-                            <Link to='/dashboard/myClass'>  <li className='ml-4 text-xl'>My Class</li>  </Link>                                   
-                            <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
-                        </>
-                    }
+                        {
+                            findUserRole === 'instructor' &&
+                            <>
+                                <Link to='/dashboard/addClass'>  <li className='ml-4 text-xl'>Add a Class </li> </Link>
+                                <Link to='/dashboard/myClass'>  <li className='ml-4 text-xl'>My Class</li>  </Link>
+                                <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
+                            </>
+                        }
 
-                    {
-                         findUserRole==='student' &&
-                        <>
-                            <Link to='/dashboard/selectedClass'>  <li className='ml-4 text-xl'>My Selected Class </li> </Link>
-                            <Link to='/dashboard/enrollClass'>  <li className='ml-4 text-xl'>My Enroll Class</li>  </Link>                                   
-                            <Link to='/dashboard/payment'>  <li className='ml-4 text-xl'>Payment</li>  </Link>                                   
-                            <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
-                        </>
-                    }
+                        {
+                            findUserRole === 'student' &&
+                            <>
+                                <Link to='/dashboard/selectedClass'>  <li className='ml-4 text-xl'>My Selected Class </li> </Link>
+                                <Link to='/dashboard/enrollClass'>  <li className='ml-4 text-xl'>My Enroll Class</li>  </Link>
+                                <Link to='/dashboard/payment'>  <li className='ml-4 text-xl'>Payment</li>  </Link>
+                                <Link to='/'>             <li className='ml-4 text-xl mr-12'>Go to Home</li> </Link>
+                            </>
+                        }
 
 
                     </ul>

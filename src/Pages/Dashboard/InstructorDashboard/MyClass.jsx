@@ -28,7 +28,13 @@ const MyClass = () => {
             title:  `
             <h1 className='text-2xl text-red-600 text-center'>Feedback About Your Class</h1>
             <hr>
-            ${feedback}`,
+            ${feedback}
+             
+            `
+            
+            ,
+           
+
             showClass: {
                 popup: 'animate__animated animate__fadeInDown'
             },

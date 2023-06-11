@@ -47,7 +47,7 @@ const AddClass = () => {
                     // console.log(imgURL);
 
                     const { className, email, instructorName, price, totalSeat } = data;
-                    const newClass = { className, email, instructorName, price: parseFloat(price), totalSeat, image: imgURL,status:'pending',feedback:'none' };
+                    const newClass = { className, email, instructorName, price: parseFloat(price), totalSeat:parseInt(totalSeat),available_seat:parseInt(totalSeat), image: imgURL,status:'pending',feedback:'none' };
                     // console.log(newClass);
 
 

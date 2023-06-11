@@ -7,36 +7,20 @@ import { useState } from 'react';
 const useRole = () => {
  
 
-    const {user}=useContext(AuthContext);
-    const [allUsers]=UseAllUser();
+    const { user } = useContext(AuthContext);
+    const [allUsers, allUsersLoading, refetch] = UseAllUser();
 
-    const [state,setState]=useState(false);
-
-    // console.log(user);
-    // console.log(allUsers);
-
-    const loggedUserEmail=user.email;
-    // console.log(loggedUserEmail);
-    const findUser=allUsers.filter(data=>data.email===loggedUserEmail);
-    console.log(findUser);
-
-    // const findUserRole=findUser[0].role;
-    // console.log(typeof findUserRole);
-
-    // if(findUserRole==='admin'){
-    //     setState(true);
-    // }
-    // else if(findUserRole==='instructor'){
-    //     setState(true);
-    // }
-    // else if(findUserRole==='student'){
-    //     setState(true);
-    // }
+    let findUserRole='';
+    if (!allUsersLoading) {
+        const loggedUserEmail = user.email;
+        const findUser = allUsers.filter(data => data.email === loggedUserEmail);
+          findUserRole = findUser[0].role;
+    }
 
  
-    // return [state,findUserRole];
-
  
+    return [findUserRole];
+
 
 };
 

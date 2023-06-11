@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { FaEye } from 'react-icons/fa';
@@ -10,6 +10,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Registration = () => {
+//password hide and show
+const [show, setShow] =useState(false);
+const handleShow= () =>{
+    setShow(!show)
+}
+
 
     const navigate=useNavigate();
     const { user, createAccount ,updateUserProfile} = useContext(AuthContext);
@@ -131,7 +137,7 @@ const Registration = () => {
                                         <span className="label-text text-black">Password</span>
                                     </label>
                                     <div className='w-full rounded-md border-sky-300 flex  justify-between border'>
-                                        <input type='password' required
+                                        <input type={show? "text" :"password"} required
                                             {...register("password", {
                                                 required: true,
                                                 maxLength: 20,
@@ -140,7 +146,7 @@ const Registration = () => {
 
                                             })}
                                             placeholder="password" className="input    bg-white border  text-black" />
-                                        <button  ><FaEye className=' mr-4'></FaEye></button>
+                                        <button  ><FaEye className=' mr-4'onClick={handleShow}>{show? "Hide": "Show"}</FaEye></button>
 
 
                                     </div>
@@ -156,10 +162,10 @@ const Registration = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-black">Password</span>
+                                        <span className="label-text text-black">Confirm Password</span>
                                     </label>
                                     <div className='w-full rounded-md border-sky-300 flex  justify-between border'>
-                                        <input type='password' required
+                                        <input type={show? "text" :"password"} required
                                             {...register("confirmPassword", {
                                                 required: true,
                                                 maxLength: 20,
@@ -168,7 +174,7 @@ const Registration = () => {
 
                                             })}
                                             placeholder="confirm password" className="input    bg-white border  text-black" />
-                                        <button  ><FaEye className=' mr-4'></FaEye></button>
+                                        <button  ><FaEye className=' mr-4'onClick={handleShow}>{show? "Hide": "Show"}</FaEye></button>
 
 
                                     </div>

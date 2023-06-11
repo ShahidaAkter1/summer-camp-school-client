@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 const DisplayManageUser = ({ singleUser, index,refetch }) => {
 
     const { _id, name, email,role,photo } = singleUser;
+    const [notDisable,setNotDisable]=useState(true);
+    
     const [disable,setDisable]=useState(false);
     const [disableInstructor,setDisableInstructor]=useState(false);
 
@@ -20,6 +22,7 @@ const DisplayManageUser = ({ singleUser, index,refetch }) => {
                 // console.log(data);
                 if (data.modifiedCount > 0) {                   
                     refetch();
+
                     setDisable(true);
                     setDisableInstructor(false);
                     Swal.fire({
@@ -91,7 +94,9 @@ const DisplayManageUser = ({ singleUser, index,refetch }) => {
     }
 
     
-
+// if(role!=='instructor'){
+//     setDisable
+// }
 
 
     return (
@@ -112,10 +117,25 @@ const DisplayManageUser = ({ singleUser, index,refetch }) => {
                 <td> {name} </td>
                 <td>{email}</td>
                 <td>{role}</td>
-                <td className=''> <button disabled={disable} onClick={() => handleMakeAdmin(singleUser)} className="btn text-white btn-active btn-accent btn-xs">Make Admin</button></td>
+                <td className=''> 
+                
+        
+
+                <button 
+                disabled={role !== 'admin'  ?  disable : notDisable} onClick={() => handleMakeAdmin(singleUser)} className="btn text-white btn-active btn-accent btn-xs">Make Admin</button>
+                
+                
+                </td>
 
                 <td>
-                    <button disabled={disableInstructor} onClick={() => handleMakeInstructor(singleUser)} className="btn btn-active btn-primary btn-xs ">Make Instructor</button>
+    
+                    <button 
+                      disabled={role !== 'instructor'  ?  disable : notDisable}
+                    
+                    onClick={() => handleMakeInstructor(singleUser)} className="btn btn-active btn-primary btn-xs ">Make Instructor</button>
+
+
+
                 </td>
                 <td>
                     <button onClick={()=>handleDelete(_id,name)} className="btn btn-active btn-secondary btn-xs ">Delete</button>

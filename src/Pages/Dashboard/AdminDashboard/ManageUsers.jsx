@@ -6,7 +6,7 @@ import DisplayManageUser from './DisplayManageUser';
 
 const ManageUsers = () => {
 
-    const [allUsers,refetch] = UseAllUser();
+    const [allUsers,allUsersLoading,refetch] = UseAllUser();
     // console.log(allUsers);
 
     return (

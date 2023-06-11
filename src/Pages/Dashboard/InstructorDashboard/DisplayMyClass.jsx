@@ -6,6 +6,9 @@ const DisplayMyClass = ({ myclass, index,handleFeedback }) => {
 
     const { className, email, instructorName, price, totalSeat, image, status,_id,feedback } = myclass;
 
+    
+    // console.log(feedback);
+
     // console.log(myclass);
     // console.log(status=='denied');
     // console.log(status!=='pending');
@@ -41,10 +44,9 @@ const DisplayMyClass = ({ myclass, index,handleFeedback }) => {
                 <td className='text-red-600'>{status}</td>
                 <td>
                     {
-                        status!=='pending' ? 
-                        <button   className="btn btn-active btn-primary btn-xs ">Show</button>
+                        status!=='pending' && status!=='approved' ? 
+                        <button onClick={()=>handleFeedback(_id,feedback)}  className="btn btn-active btn-primary btn-xs ">Show</button>
                         :
-
                         'None'
                     }
                 </td>
