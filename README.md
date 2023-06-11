@@ -15,7 +15,7 @@ v. Admin Dashboard and Class Approval: Create an admin dashboard for managing cl
 
 
 ### Live Link:
-Hosted in Firebase:
+Hosted in Firebase:  https://summer-camp-school-154eb.web.app
 
 
 ### Github Repo Client side:

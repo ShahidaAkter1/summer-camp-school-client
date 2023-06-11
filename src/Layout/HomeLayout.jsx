@@ -9,7 +9,9 @@ const HomeLayout = () => {
 
 
             <Header></Header>
-            <Outlet></Outlet>
+             <div className='pt-16 pb-20'>
+                 <Outlet></Outlet>
+             </div>
             <Footer></Footer>
 
         </div>
