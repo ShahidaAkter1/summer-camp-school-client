@@ -1,0 +1,32 @@
+<!-- 
+    
+    
+    
+    
+    import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+   
+   <ToastContainer />
+
+
+
+   <Helmet>
+    <title>Registration | CosmetiCraft</title>
+</Helmet>
+
+
+//show all
+const [showAll,setShowAll]=useState(false);
+
+{
+            data.slice(0,showAll ? 12:6).map(singleData=><SIngleData
+                 singleData={singleData}
+                 key={singleData.id}
+                 
+                 ></SIngleData>)
+}
+
+
+
+
+-->

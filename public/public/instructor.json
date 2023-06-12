@@ -1,0 +1,72 @@
+[
+    {
+      "_id": 1,
+      "name": "Emily Johnson",
+      "image": "https://example.com/emily_johnson.jpg",
+      "email": "emily.johnson@example.com",
+      "number_of_classes_taken": 20
+    },
+    {
+      "_id": 2,
+      "name": "Sophia Lee",
+      "image": "https://example.com/sophia_lee.jpg",
+      "email": "sophia.lee@example.com",
+      "number_of_classes_taken": 15
+    },
+    {
+      "_id": 3,
+      "name": "Olivia Smith",
+      "image": "https://example.com/olivia_smith.jpg",
+      "email": "olivia.smith@example.com",
+      "number_of_classes_taken": 18
+    },
+    {
+      "_id": 4,
+      "name": "Ava Wilson",
+      "image": "https://example.com/ava_wilson.jpg",
+      "email": "ava.wilson@example.com",
+      "number_of_classes_taken": 12
+    },
+    {
+      "_id": 5,
+      "name": "Mia Davis",
+      "image": "https://example.com/mia_davis.jpg",
+      "email": "mia.davis@example.com",
+      "number_of_classes_taken": 25
+    },
+    {
+      "_id": 6,
+      "name": "Charlotte Taylor",
+      "image": "https://example.com/charlotte_taylor.jpg",
+      "email": "charlotte.taylor@example.com",
+      "number_of_classes_taken": 30
+    },
+    {
+      "_id": 7,
+      "name": "Amelia Anderson",
+      "image": "https://example.com/amelia_anderson.jpg",
+      "email": "amelia.anderson@example.com",
+      "number_of_classes_taken": 10
+    },
+    {
+      "_id": 8,
+      "name": "Harper Thomas",
+      "image": "https://example.com/harper_thomas.jpg",
+      "email": "harper.thomas@example.com",
+      "number_of_classes_taken": 22
+    },
+    {
+      "_id": 9,
+      "name": "Evelyn Martinez",
+      "image": "https://example.com/evelyn_martinez.jpg",
+      "email": "evelyn.martinez@example.com",
+      "number_of_classes_taken": 17
+    },
+    {
+      "_id": 10,
+      "name": "Abigail Rodriguez",
+      "image": "https://example.com/abigail_rodriguez.jpg",
+      "email": "abigail.rodriguez@example.com",
+      "number_of_classes_taken": 13
+    }
+  ]
